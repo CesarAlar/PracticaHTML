@@ -1,0 +1,300 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1,h2,h3,p{
+    margin: 0;padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    max-width: 100%; 
+    border-radius: 10px;
+}
+.separacion{
+    display: flex;
+    justify-content: space-between;
+    background-color: #AB5C46;
+    align-items: center;
+}
+.logo p{
+    background-color: #AB5C46;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 0 0 0 6rem;
+}
+.logo p span{
+    font-family: 'Share Tech Mono', monospace;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+.menu a{
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+    padding: 1.3rem;
+    color: white;
+}
+.menu a:hover{
+    background-color: white;
+    color: #AB5C16;
+}
+@media(max-width: 768px){
+    .separacion{
+        flex-direction: column;
+    }
+    .logo{
+        text-align: center;
+    }
+    .logo p{
+        padding: 1.5rem;
+        margin: 0;
+    }
+    .menu{
+        text-align: center;
+        justify-content: space-evenly;
+        background-color: #AB5C46;
+        border-top: 1px solid black;
+    }
+    .menu a {
+        /* justify-content: space-between; */
+        font-size: large;
+        color: white;
+        padding: .2rem;
+        overflow: hidden;
+        background-color: #AB5C46;
+    }
+}
+.encabezado{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/pastel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 90.5vh ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.encabezado h1{
+    font-family: 'Share Tech Mono', monospace;
+    align-self: center;
+    color: white;
+    transform: transition;
+}
+.boton{
+    font-family: 'Dancing Script', cursive; ;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10%;
+    background-color: #AB5C46;
+    color: white;
+}
+.boton:hover{
+    background-color: white;
+    color: #774335;
+    transition: .9s ease;
+}
+@media(max-width: 768px){
+    .encabezado h1{
+        padding: 1rem;
+        text-align: center;
+    }
+}
+/* caracteristicas ********************** */
+.nosotros{
+    background-color: #a86c5c;
+    padding: .1rem;
+}
+.caracteristicas{
+    display: flex;
+    margin: 2rem;
+    padding: 2rem;
+    height: 30rem;
+    overflow: hidden;
+    justify-content: space-evenly;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; 
+    flex:0 1 calc(33% - 1rem);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    /* background-color: #bbb; */
+    color: black;
+    width: 96%;
+    max-width: 960px
+}
+
+.flip-card-back {
+    background-color: #a86c5c;
+    color: white;
+    font-family: 'Dancing Script', cursive;;
+    transform: rotateY(180deg);
+    height: 200%;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.flip-card-back p{
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+@media(max-width: 768px){
+    .caracteristicas{
+        flex-direction: column;
+        width: 100%;
+        height: 100ch;
+        margin: 0;
+        padding: 0;
+    }
+    .flip-card{
+        align-self: center;
+        flex: 1 0 calc(33% - 1rem);
+        width: 300px;
+        height: 300px;
+        padding: 1rem 0;
+        overflow: hidden;
+    }
+}
+/* PRODUCTOS************************** */
+.seccion{
+    background-color: #f8dad2d0;
+}
+.seccion h2{
+    font-family:'Dancing Script', cursive; ;
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 3rem;
+    padding: 3rem;
+}
+.productos{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    /* padding: 3rem; */
+    flex-wrap: wrap;
+}
+.productos .card{
+    margin-bottom: 2rem;
+    /* padding:0 2rem; */
+    margin-bottom: 5rem;
+    flex:0 1 calc(33.3% - 3rem);
+    background-color: rgb(255, 231, 248);
+    border: 3px solid white;
+    border-radius: 15px;
+}
+.producto{
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+.descripcion{
+    margin: 2rem;
+    text-align: justify;
+    font-family: 'Dancing Script';
+}
+/* formulario *************************** */
+.contenedor{
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0 0 0;
+    padding-bottom: 7rem;
+}
+.contenedor h2{
+    text-align: center;
+    margin: 3rem ;
+    padding: 1rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+.formulario{
+    background-image: linear-gradient(120deg, #b47e6fdc 0%, #c49184 100%);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #AB5C16;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    box-shadow: 15px 13px 21px -4px rgba(18,15,15,0.58);
+}
+label{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: white;
+}
+input{
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 20px;
+    font-family:'Share Tech Mono', monospace ;
+    height: 2.4rem;
+}
+textarea{
+    border-radius: 15px;
+}
+.btn{
+    display: block;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin: 1rem 0;
+    align-self: flex-end;
+    background-color: #AB5C46;
+    color: white;
+    font-family:'Share Tech Mono', monospace ;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: white;
+    color: #bd6851b2;
+    font-weight: bolder;
+}
